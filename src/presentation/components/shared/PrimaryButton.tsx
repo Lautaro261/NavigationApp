@@ -1,22 +1,16 @@
 import React from 'react';
-import { Text, Pressable } from 'react-native';
-import { globalStyles } from '../../theme/theme';
+import {Text, Pressable} from 'react-native';
+import {globalStyles} from '../../theme/theme';
 
 interface Props {
-    label: string,
-    onPress: ()=> void,
+  label: string;
+  onPress: () => void;
 }
 
-export const PrimaryButton = ({
-    label,
-    onPress,
-}:Props) => {
+export const PrimaryButton = ({label, onPress}: Props) => {
   return (
-        <Pressable
-        onPress={()=>onPress()}
-        style={globalStyles.primaryButton}
-        >
+    <Pressable onPress={() => onPress()} style={globalStyles.primaryButton}>
       <Text style={globalStyles.ButtonText}>{label}</Text>
-        </Pressable>
+    </Pressable>
   );
 };
